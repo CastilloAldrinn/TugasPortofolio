@@ -1,0 +1,48 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #0b1a33;
+  color: white;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
+  color: #00c8ff;
+}
+
+.form-input {
+  margin: 20px 0;
+}
+
+input, button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  background: #00c8ff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: #009ecf;
+}
+
+.result {
+  margin-top: 20px;
+}
+
+#media img, #media iframe {
+  max-width: 100%;
+  border-radius: 10px;
+  margin: 15px 0;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head><meta charset="utf-8"><title>Histori</title><link rel="stylesheet" href="css/style.css"></head>
+<body>
+  <div class="container">
+    <div class="header card"><div class="brand"><img src="assets/pelita-logo.png"><div><strong>Pelita Sejahtera</strong></div></div><div class="top-links"><a href="home.html" class="btn">Home</a><a id="logout" class="btn" style="background:transparent;border:2px solid #fff;color:#fff">Logout</a></div></div>
+    <div style="height:18px"></div>
+
+    <div class="card">
+      <h2>Histori Pembelian</h2>
+      <div id="list"></div>
+    </div>
+  </div>
+
+<script src="js/app.js"></script>
+<script>
+  const cur = requireLogin('index.html');
+  if(!cur) {}
+  document.getElementById('logout').addEventListener('click', ()=>{ Storage.clearCurrent(); location.href='index.html'; });
+
+  const purchases = Storage.getPurchases();
+  const my = purchases.filter(p=>p.user===Storage.getCurrent());
+  const list = document.getElementById('list');
+  if(my.length===0) list.innerHTML = '<div class="small">Belum ada histori pembelian.</div>';
+  else {
+    list.innerHTML = my.map(p=>`
+      <div class="card" style="margin-bottom:12px">
+        <strong>${p.name}</strong> — <span class="small">${p.type}</span><br>
+        Tanggal: ${new Date(p.date).toLocaleString()}<br>
+        Jumlah: ${p.pricePaid ? formatIDR(p.pricePaid) : '-'}<br>
+        Status: <strong>${p.status}</strong>
+      </div>
+    `).join('');
+  }
+</script>
+</body>
+</html>

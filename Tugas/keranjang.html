@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keranjang Belanja</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0; padding: 0;
+      background: #f9f9f9;
+    }
+    header {
+      background: #4CAF50; color: white;
+      padding: 15px; text-align: center;
+    }
+    h1 { margin: 0; }
+    main {
+      max-width: 800px; margin: 30px auto; padding: 20px;
+      background: white; border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    table {
+      width: 100%; border-collapse: collapse; margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #ddd; padding: 12px; text-align: center;
+    }
+    th {
+      background: #f2f2f2; font-weight: bold;
+    }
+    .total {
+      text-align: right; margin-top: 20px; font-size: 18px; font-weight: bold;
+    }
+    .btn {
+      display: inline-block; margin-top: 15px;
+      background: #4CAF50; color: white;
+      padding: 12px 20px; border-radius: 8px;
+      text-decoration: none; transition: 0.3s;
+    }
+    .btn:hover { background: #45a049; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Keranjang Belanja</h1>
+  </header>
+  <main>
+    <table>
+      <tr>
+        <th>Produk</th>
+        <th>Jumlah</th>
+        <th>Harga</th>
+        <th>Total</th>
+      </tr>
+      <tr>
+        <td>Produk A</td>
+        <td>2</td>
+        <td>Rp 50.000</td>
+        <td>Rp 100.000</td>
+      </tr>
+      <tr>
+        <td>Produk B</td>
+        <td>1</td>
+        <td>Rp 75.000</td>
+        <td>Rp 75.000</td>
+      </tr>
+    </table>
+    <p class="total">Total Belanja: Rp 175.000</p>
+    <a href="checkout.html" class="btn">Checkout</a>
+  </main>
+</body>
+</html>
